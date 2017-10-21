@@ -1,6 +1,5 @@
-
-
 var inviter = {} || inviter;
+var totalInvites = 0;
 inviter.userList = [];
 inviter.className = 'button-secondary-small';
 
@@ -27,7 +26,9 @@ inviter.invite = function () {
         if (connectBtns != null && connectBtns[i] != null) {inviter.handleRepeat(connectBtns[i]);}
             
         if (i == buttonLength - 1) {
+            totalInvites += i;
             console.log("done: " + i);
+            console.log("total: " + totalInvites);
             inviter.refresh();
         }
     }

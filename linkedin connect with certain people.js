@@ -12,6 +12,7 @@ var userRole = [
 ];
 
 var inviter = {} || inviter;
+var totalInvites = 0;
 inviter.userList = [];
 inviter.className = 'button-secondary-small';
 var addedPpl = 0;
@@ -41,6 +42,8 @@ inviter.invite = function () {
         }
         if (i == buttonLength - 1) {
             console.log("Added: " + addedPpl);
+            totalInvites += i;
+            console.log('total: ' + totalInvites);
             inviter.refresh();
         }
     }
